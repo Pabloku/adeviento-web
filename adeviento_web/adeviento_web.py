@@ -16,12 +16,12 @@ preview = "https://adviento.dev/preview.jpg"
 
 
 def index() -> rx.Component:
-    return rx.box(
+    return rx.chakra.box(
         rx.script("document.documentElement.lang='es'"),
         rx.script(src="/js/snow.js"),
         navbar(),
-        rx.center(
-            rx.vstack(
+        rx.chakra.center(
+            rx.chakra.vstack(
                 header(),
                 calendar(),
                 partners(),

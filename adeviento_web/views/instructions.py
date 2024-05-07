@@ -6,25 +6,25 @@ from adeviento_web.components.button import button
 
 
 def instructions() -> rx.Component:
-    return rx.box(
-        rx.vstack(
-            rx.text(
+    return rx.chakra.box(
+        rx.chakra.vstack(
+            rx.chakra.text(
                 "¿Cómo funciona el evento?",
                 class_name="title",
                 color=TextColor.ACCENT.value
             ),
-            rx.span(
+            rx.chakra.span(
                 "• Del 1 al 24 de diciembre descubriré cada día un nuevo regalo en el calendario."),
-            rx.span("• Puedes participar desde cualquier parte del mundo."),
-            rx.span("• Sólo tendrás que hacer Retweet a la publicación que enlazaré desde esta web. Tu cuenta de Twitter/X tiene que ser pública."),
+            rx.chakra.span("• Puedes participar desde cualquier parte del mundo."),
+            rx.chakra.span("• Sólo tendrás que hacer Retweet a la publicación que enlazaré desde esta web. Tu cuenta de Twitter/X tiene que ser pública."),
             button(
                 "Twitter",
                 constants.TWITTER_URL
             ),
-            rx.span(
+            rx.chakra.span(
                 "• Al día siguiente realizaré el sorteo de forma pública y compartiré el ganador en la web y en Twitter/X."
             ),
-            rx.span(
+            rx.chakra.span(
                 "• ¡Vuelta a empezar! Publicaré un nuevo regalo y comenzará de nuevo el proceso."
             ),
             class_name="nes-container is-dark with-title",

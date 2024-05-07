@@ -135,19 +135,19 @@ _current_day = len(_gifts) - 1
 
 
 def calendar() -> rx.Component:
-    return rx.vstack(
+    return rx.chakra.vstack(
         header_text(
             "heart",
             "Calendario 2023 (finalizado). ¡Muchas gracias por participar!"
         ),
-        # rx.vstack(
-        #     rx.text(
+        # rx.chakra.vstack(
+        #     rx.chakra.text(
         #         "El regalo de hoy",
         #         class_name="title",
         #         color=TextColor.ACCENT.value
         #     ),
-        #     rx.flex(
-        #         rx.box(
+        #     rx.chakra.flex(
+        #         rx.chakra.box(
         #             day(
         #                 _current_day + 1,
         #                 _gift_name(_current_day),
@@ -158,16 +158,16 @@ def calendar() -> rx.Component:
         #             aspect_ratio="1",
         #             margin_right=Size.BIG.value
         #         ),
-        #         rx.vstack(
-        #             rx.span(
+        #         rx.chakra.vstack(
+        #             rx.chakra.span(
         #                 f"Día {_current_day + 1}"),
-        #             rx.link(
+        #             rx.chakra.link(
         #                 _gift_name(_current_day),
         #                 href=_gift_info(_current_day),
         #                 is_external=True
         #             ),
-        #             rx.spacer(),
-        #             rx.flex(
+        #             rx.chakra.spacer(),
+        #             rx.chakra.flex(
         #                 button(
         #                     "Participa",
         #                     _gift_url(_current_day)
@@ -188,7 +188,7 @@ def calendar() -> rx.Component:
         #     class_name="nes-container is-dark with-title",
         #     align_items="start"
         # ),
-        rx.responsive_grid(
+        rx.chakra.responsive_grid(
             *[
                 day(
                     number + 1,
@@ -208,14 +208,14 @@ def calendar() -> rx.Component:
             width="100%",
             padding_y=Size.BIG.value
         ),
-        rx.vstack(
-            rx.hstack(
-                rx.text(
+        rx.chakra.vstack(
+            rx.chakra.hstack(
+                rx.chakra.text(
                     # "Próximo regalo y ganadores en",
                     "Calendario 2024 en",
                     margin_right=Size.DEFAULT.value
                 ),
-                rx.text(
+                rx.chakra.text(
                     id="countdown",
                     margin_left=Size.ZERO.value
                 ),
@@ -226,10 +226,10 @@ def calendar() -> rx.Component:
             #     "Recordar",
             #     constants.DISCORD_EVENT_URL
             # ),
-            rx.span(
+            rx.chakra.span(
                 "• Los regalos son sorpresa, permanecerán ocultos hasta el día de su publicación. No olvides pasarte por aquí cada día para descubrir un nuevo sorteo."
             ),
-            rx.span(
+            rx.chakra.span(
                 "• Puedes seleccionar cada regalo para conocer a los ganadores una vez se haya publicado el nuevo sorteo (aparecerá en rojo)."
             ),
             class_name="nes-container is-dark",

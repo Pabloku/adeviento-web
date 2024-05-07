@@ -8,13 +8,13 @@ from adeviento_web.components.button import button
 
 
 def author() -> rx.Component:
-    return rx.vstack(
+    return rx.chakra.vstack(
         header_text(
             "like",
             "Hola, mi nombre es Brais Moure"
         ),
-        rx.flex(
-            rx.avatar(
+        rx.chakra.flex(
+            rx.chakra.avatar(
                 name="Brais Moure",
                 size="2xl",
                 src="avatar.jpg",
@@ -25,13 +25,13 @@ def author() -> rx.Component:
                 margin_right=Size.SMALL.value,
                 margin_bottom=Size.SMALL.value
             ),
-            rx.vstack(
-                rx.span(
+            rx.chakra.vstack(
+                rx.chakra.span(
                     f"Soy ingeniero de software desde hace más de {_experience()} años."
                 ),
-                rx.span(
+                rx.chakra.span(
                     "En 2018 comencé a divulgar contenido sobre programación y desarrollo de software en redes sociales como ",
-                    rx.span(
+                    rx.chakra.span(
                         "@mouredev",
                         color=TextColor.ACCENT.value,
                         font_size=Size.DEFAULT.value
@@ -51,7 +51,7 @@ def author() -> rx.Component:
 
 
 def _author_buttons() -> rx.Component:
-    return rx.stack(
+    return rx.chakra.stack(
         button(
             "YouTube",
             constants.YOUTUBE_URL

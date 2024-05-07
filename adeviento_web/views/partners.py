@@ -5,14 +5,14 @@ from adeviento_web.components.header_text import header_text
 
 
 def partners() -> rx.Component:
-    return rx.vstack(
-        rx.vstack(
+    return rx.chakra.vstack(
+        rx.chakra.vstack(
             header_text(
                 "star",
                 "Con la ayuda de",
                 False
             ),
-            rx.responsive_grid(
+            rx.chakra.responsive_grid(
                 _partner_link(
                     "elgato.png",
                     "https://e.lga.to/MoureDev",
@@ -45,8 +45,8 @@ def partners() -> rx.Component:
 
 
 def _partner_link(image: str, url: str, alt: str) -> rx.Component:
-    return rx.link(
-        rx.image(
+    return rx.chakra.link(
+        rx.chakra.image(
             src=image,
             width="100%",
             height="100%",

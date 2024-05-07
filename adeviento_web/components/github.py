@@ -4,29 +4,29 @@ from adeviento_web.styles.styles import Size
 
 
 def github() -> rx.Component:
-    return rx.link(
+    return rx.chakra.link(
 
-        rx.vstack(
-            rx.vstack(
-                rx.span(
+        rx.chakra.vstack(
+            rx.chakra.vstack(
+                rx.chakra.span(
                     "Proyecto"
                 ),
-                rx.span(
+                rx.chakra.span(
                     "en GitHub"
                 ),
                 align_items="start",
                 class_name="nes-balloon from-right is-dark",
                 margin_bottom=Size.BIG.value
             ),
-            rx.box(
-                rx.span(
+            rx.chakra.box(
+                rx.chakra.span(
                     constants.VERSION,
                     class_name="is-error"
                 ),
                 class_name="nes-badge"
             )
         ),
-        rx.box(
+        rx.chakra.box(
             class_name="nes-octocat animate"
         ),
         href=constants.GITHUB_REPO_URL,

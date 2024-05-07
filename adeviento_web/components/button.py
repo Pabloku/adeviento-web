@@ -2,8 +2,8 @@ import reflex as rx
 
 
 def button(text: str, url: str) -> rx.Component:
-    return rx.link(
-        rx.button(
+    return rx.chakra.link(
+        rx.chakra.button(
             text,
             class_name="nes-btn is-error"
         ),

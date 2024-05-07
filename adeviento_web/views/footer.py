@@ -5,17 +5,17 @@ from adeviento_web.styles.styles import Size, TextColor
 
 
 def footer() -> rx.Component:
-    return rx.hstack(
-        rx.center(
-            rx.vstack(
-                rx.text(
+    return rx.chakra.hstack(
+        rx.chakra.center(
+            rx.chakra.vstack(
+                rx.chakra.text(
                     "Calendario de aDEViento 2023",
                     font_size=Size.MEDIUM.value,
                     margin_bottom=Size.ZERO.value
                 ),
-                rx.link(
+                rx.chakra.link(
                     "Creado con ",
-                    rx.box(class_name="nes-icon is-small heart"),
+                    rx.chakra.box(class_name="nes-icon is-small heart"),
                     " (y gracias a ti) por MoureDev by Brais Moure",
                     href=constants.MOUREDEV_URL,
                     is_external=True,
@@ -25,8 +25,8 @@ def footer() -> rx.Component:
                 align_items="start",
                 spacing=Size.MEDIUM.value
             ),
-            rx.spacer(),
-            rx.image(
+            rx.chakra.spacer(),
+            rx.chakra.image(
                 src="logo.png",
                 alt="Logo MoureDev. Una letra \"eme\" entre dos corchetes.",
                 class_name="nes-avatar is-large"

@@ -5,16 +5,16 @@ from adeviento_web.components.link_icon import link_icon
 
 
 def navbar() -> rx.Component:
-    return rx.vstack(
-        rx.hstack(
-            rx.image(
+    return rx.chakra.vstack(
+        rx.chakra.hstack(
+            rx.chakra.image(
                 src="mouredev.png",
                 alt="Imagen pixel art de MoureDev con estilo navideño.",
                 width="3em",
                 height="3em"
             ),
-            rx.text("aDEViento 2023"),
-            rx.spacer(),
+            rx.chakra.text("aDEViento 2023"),
+            rx.chakra.spacer(),
             rx.tablet_and_desktop(
                 link_icon(
                     "youtube",

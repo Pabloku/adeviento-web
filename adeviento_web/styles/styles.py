@@ -26,21 +26,21 @@ BASE_STYLE = {
     "font_family": Font.DEFAULT.value,
     "color": TextColor.PRIMARY.value,
     "background": Color.PRIMARY.value,
-    rx.Heading: {
+    rx.chakra.Heading: {
         "font_family": Font.DEFAULT.value,
         "color": TextColor.ACCENT.value
     },
-    rx.Link: {
+    rx.chakra.Link: {
         "text_decoration": "none",
         "_hover": {
             "color": TextColor.ACCENT.value,
             "text_decoration": "none"
         }
     },
-    rx.Span: {
+    rx.chakra.Span: {
         "font_size": Size.MEDIUM.value
     },
-    rx.Button: {
+    rx.chakra.Button: {
         "margin_bottom": Size.DEFAULT.value,
         "height": Size.BUTTON.value,
         "color": f"{TextColor.SECONDARY.value} !important",
